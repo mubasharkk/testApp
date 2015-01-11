@@ -18,10 +18,14 @@
             <a class="navbar-brand" href="index">Learn Deutsch</a>
         </div>
         <div id="one">
-
-            <a href="/user/signup" class="btn btn-success btn-sm">Sign up</a>&nbsp&nbsp<a href="/user/login">Sign in</a>
-
-
+            <%if (typeof req.session.uid != 'undefined') { %>
+                <span>Hello, <%=req.session.name%>!</span>&nbsp;&nbsp;&nbsp;
+                <a href="/user/logout" class="btn btn-danger btn-sm">Logout</a>
+            <% } else { %>
+                <a href="/user/signup" class="btn btn-success btn-sm">Sign up</a>
+                &nbsp&nbsp
+                <a href="/user/login">Sign in</a>
+            <% } %>
         </div>
     </div>
 </nav>

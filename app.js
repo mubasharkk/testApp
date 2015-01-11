@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var session = require('express-session');
 
 
 //For database
@@ -21,18 +21,9 @@ MongoClient.connect('mongodb://127.0.0.1:27017/flashcard', function(err, db) {
     else {
         console.log("connection successful");
         app.db = db;
-    }});
+}});
 
 
-
-
-var routes = require('./routes/index');
-//var users = require('./routes/users');
-//var test1 = require('./routes/index');
-//var signin = require('./routes/signin');
-//var signup = require('./routes/signup');
-//var afterlogin = require('./routes/afterlogin');
-var userRoutes = require('./routes/user');
 
 
 var app = express();
@@ -49,23 +40,26 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true
+}))
+
+
+var routes = require('./routes/index');
+var userRoutes = require('./routes/user');
+
 app.use('/', routes);
-//app.use('/index', routes);
 app.use('/user', userRoutes);
-//app.use('/test1', test1);
-//app.use('/signin', signin);
-//app.use('/signup', signup);
-//app.use('/afterlogin', afterlogin);
 
 
 // catch 404 and forward to error handler
+// error handlers
 app.use(function(req, res, next) {
-    //var err = new Error('Not Found');
-    //err.status = 404;
-    next(req);
+    next(req, res);
 });
 
-// error handlers
 
 // development error handler
 // will print stacktrace
@@ -73,7 +67,7 @@ if (app.get('env') === 'development') {
     app.use(function(err, req, res, next) {
         res.status(err.status || 500);
         //console.log(err);
-        res.render('error', {
+        res.render('global/error', {
             message: err.message,
             error: err
         });

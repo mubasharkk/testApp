@@ -3,7 +3,7 @@
 
 <div class="container">
 
-      <form class="form-horizontal" role="form"id="signup" method="post" action="/signup/submit">
+      <form class="form-horizontal" role="form"id="signup" method="post" action="/user/signup">
       	<h2 style="margin: 3% 0 3% 12%";>Sign up for your FREE account</h2>
       		<div class="form-group">
     			<label class="col-sm-2 control-label">First Name</label>
@@ -14,35 +14,26 @@
   			<div class="form-group">
     			<label class="col-sm-2 control-label">Last Name</label>
     				<div class="col-sm-3">
-      					<input type="text" class="form-control" placeholder="Last Name" name="Lname" id="Lname">
+      					<input type="text" required class="form-control" placeholder="Last Name" name="Lname" id="Lname">
     				</div>
   			</div>
   			<div class="form-group">
     			<label class="col-sm-2 control-label">Choose a username</label>
     				<div class="col-sm-3">
-      					<input type="text" class="form-control" placeholder="Username" name="Uname" id="Uname">
+      					<input type="text" required class="form-control" placeholder="Username" name="Uname" id="Uname">
     				</div>
   			</div>
   			<div class="form-group">
    				<label class="col-sm-2 control-label">Choose a password</label>
     				<div class="col-sm-3">
-     					 <input type="password" class="form-control" placeholder="Password" name="pwd" id="pwd">
+     					 <input type="password" required class="form-control" placeholder="Password" name="pwd" id="pwd">
     				</div>
   			</div>
   			<div class="form-group">
     			<label class="col-sm-2 control-label">Enter your email</label>
     				<div class="col-sm-3">
-      					<input type="email" class="form-control" placeholder="email" name="email" id="email">
+      					<input type="email" required class="form-control" placeholder="email" name="email" id="email">
     				</div>
-  			</div>
-  			<div class="form-group">
-    			<div class="col-sm-offset-2 col-sm-10">
-      				<div class="checkbox">
-				        <label>
-				          <input type="checkbox"> Remember me
-				        </label>
-      				</div>
-    			</div>
   			</div>
   			<div class="form-group">
     			<div class="col-sm-offset-2 col-sm-10">

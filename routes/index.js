@@ -5,11 +5,17 @@ var router = express.Router();
 
 
 router.get('/', function(req, res) {
-    res.render('index', { title: 'Flashcard Learning' });
+
+	// if (req.session.uid){
+	// 	res.redirect('/user/welcome');
+	// 	return;
+	// }
+
+    res.render('index', { title: 'Flashcard Learning', req: req });
 });
 
 router.get('/welcome', function(req, res) {
-    res.render('welcome');
+    res.render('index');
 });
 
 module.exports = router;
