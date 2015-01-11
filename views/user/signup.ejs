@@ -1,0 +1,60 @@
+
+<% include views\global\header.ejs %>
+
+<div class="container">
+
+      <form class="form-horizontal" role="form"id="signup" method="post" action="/signup/submit">
+      	<h2 style="margin: 3% 0 3% 12%";>Sign up for your FREE account</h2>
+      		<div class="form-group">
+    			<label class="col-sm-2 control-label">First Name</label>
+    				<div class="col-sm-3">
+      					<input type="text" required="1" class="form-control" placeholder="First Name" name="Fname" id="Fname">
+    				</div>
+  			</div>
+  			<div class="form-group">
+    			<label class="col-sm-2 control-label">Last Name</label>
+    				<div class="col-sm-3">
+      					<input type="text" class="form-control" placeholder="Last Name" name="Lname" id="Lname">
+    				</div>
+  			</div>
+  			<div class="form-group">
+    			<label class="col-sm-2 control-label">Choose a username</label>
+    				<div class="col-sm-3">
+      					<input type="text" class="form-control" placeholder="Username" name="Uname" id="Uname">
+    				</div>
+  			</div>
+  			<div class="form-group">
+   				<label class="col-sm-2 control-label">Choose a password</label>
+    				<div class="col-sm-3">
+     					 <input type="password" class="form-control" placeholder="Password" name="pwd" id="pwd">
+    				</div>
+  			</div>
+  			<div class="form-group">
+    			<label class="col-sm-2 control-label">Enter your email</label>
+    				<div class="col-sm-3">
+      					<input type="email" class="form-control" placeholder="email" name="email" id="email">
+    				</div>
+  			</div>
+  			<div class="form-group">
+    			<div class="col-sm-offset-2 col-sm-10">
+      				<div class="checkbox">
+				        <label>
+				          <input type="checkbox"> Remember me
+				        </label>
+      				</div>
+    			</div>
+  			</div>
+  			<div class="form-group">
+    			<div class="col-sm-offset-2 col-sm-10">
+      				<button type="submit" class="btn btn-success btn-sm">Sign up</button>
+    			</div>
+  			</div>
+		</form>
+			<div style="margin-left: 17%";>
+				Already have an account? <button><a href="signin">Sign in</a></button>
+			</div>
+
+    </div> <!-- /container -->
+
+
+<% include views\global\footer.ejs %>

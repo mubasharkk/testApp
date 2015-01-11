@@ -1,0 +1,115 @@
+#one{
+	float: right;
+	margin-top: 10px;
+}
+
+#test{
+	margin: 0px;
+
+}
+
+#or{
+	display : inline;
+	margin-left: 50px;
+}
+
+#b1{
+	margin-left: 50px;
+}
+
+#fore{
+	background-color: #CCCCCC;
+	margin-top: 50px;
+}
+
+#members{
+	float: left;
+	margin-right: 30px;
+}
+
+#flashcards{
+	float: left;
+	margin-right: 30px;
+}
+
+#join{
+	margin: 10% 0 0 40%;
+}
+#flashCardHolder{
+width: 500px;
+height: 300px;
+margin: 0 auto;
+overflow:hidden;
+}
+.learnBox{
+	background: #FFF;
+border-radius:15px;
+box-shadow: 3px 4px 4px #CCC;
+position:relative;
+min-height:274px;
+
+}
+.learnBox.show{
+display:block;
+}
+.learnBox.hidden{
+display:hidden;
+}
+.learnTitle{
+color: #A8A8A8;
+position: absolute;
+top: 15px;
+left: 190px;
+}
+.learnNumber{
+position:absolute;
+right:20px;
+top:10px;
+font-size:20px;
+color:#A8A8A8;
+}
+.learnQuestion{
+	font-size:40px;
+	text-align:center;
+	padding-top:112px;
+}
+
+.showButton{
+position: absolute;
+
+bottom: 0px;
+background: #CCC;
+color: white;
+padding: 6px 30px;
+font-size: 24px;
+
+display:block;
+cursor:pointer;
+}
+.showButton.justShow{
+	right:0px;
+	border-radius:13px 0px;
+}
+.showButton.true{
+right: 0px;
+border-radius: 13px 0px;
+background:green;
+}
+.showButton.false{
+	left:0px;
+	border-radius: 0px 13px;
+	background:red;
+}
+.showButton.choose:hover{
+	text-decoration:none;
+}
+.showButton:hover{
+text-decoration:underline;
+background:#888787;
+}
+
+
+
+
+
+
